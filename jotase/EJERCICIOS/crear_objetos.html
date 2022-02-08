@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no,maximum-scale=1.0,initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/0dd71546de.js" crossorigin="anonymous"></script>
+   
+  <title>Document</title>
+</head>
+        <body>
+
+             <div class="container py-2">
+                <p class="lead"> Ingrese Usuarios </p>
+                <form>
+                    <input id="nombre" type="text" placeholder="Ingresa Nombre" class="form-control my-2">
+                    <input id="edad" type="text" placeholder="Ingresa Edad" class="form-control my-2">
+                    <button id="boton" class="btn btn-success" type="reset" onclick="capturar();">Agregar</button>
+                </form>
+             </div> 
+             <div class="container">
+                 <table class="table" id="tabla">
+                    <thead class="thead-inverse">
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Edad</th>
+                        </tr>
+                        
+                    </thead>
+                    <tbody>
+                        
+                            <td></td>
+                            <td></td>
+                    </tbody>
+                   
+                 </table>
+             </div>
+             <script>
+                    function capturar(){
+                        //console.log("capturando");
+                        function Persona(nombre, edad){
+
+                            this.nombre=nombre;
+                            this.edad=edad;
+
+                        }
+                        var nombreCapturar = document.getElementById("nombre").value;
+                        //console.log(nombreCapturar);
+                        var edadCapturar =document.getElementById("edad").value;
+                        //console.log(edadCapturar);
+
+                        //variable global va sin VAR para que funcione en toda la aplicacion
+                        nuevoSujeto = new Persona(nombreCapturar,edadCapturar);
+                        console.log(nuevoSujeto);
+                        agregar();
+
+
+                    }
+                    var baseDatos =[];
+
+                    function agregar(){
+                        console.log("capturado");
+                        baseDatos.push(nuevoSujeto);
+                        console.log(baseDatos);
+
+                        document.getElementById("tabla").innerHTML +='<tbody><td>'+nuevoSujeto.nombre+'</td><td>'+nuevoSujeto.edad+'</td></tbody>';
+                     };
+
+             </script>
+     
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/c485909918.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    
+  
+</body>
+</html>

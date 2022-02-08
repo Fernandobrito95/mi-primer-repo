@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no,maximum-scale=1.0,initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/0dd71546de.js" crossorigin="anonymous"></script>
+    <style>
+        
+        .menu-iconos{
+
+            width: 45px;
+            position: fixed;
+
+        }
+        .fa-share-alt{
+            cursor: pointer;
+        }
+        .desaparecer{
+
+            margin-left: -45px;
+            width: 0px;
+        }
+        #iconos-rrss{
+            width: 100%;
+            transition: all 0.5s ease; 
+        }
+
+    </style>
+  <title>Document</title>
+</head>
+<body>
+
+            <div class="mt-5 menu-iconos text-center text-white">
+                    
+                    <div id="boton" class="bg-warning"><i class="fas fa-share-alt" aria-hidden="true"></i></div>
+                    <div id="iconos-rrss" class="desaparecer">
+                        
+                        <div class="bg-primary"><a href="www.facebook.com"><i class="fa fa-facebook text-white" aria-hidden="true"></i></a></div>
+                        <div class="bg-success"><a href="www.twitter.com"><i class="fa fa-twitter text-white" aria-hidden="true"></i></a></div>
+                        <div class="bg-danger"><a href="www.youtube.com"><i class="fa fa-youtube text-white" aria-hidden="true"></i></a></div>
+                    </div>
+
+
+            </div>
+
+            
+
+     <script>
+
+            document.getElementById("boton").onclick = function(){
+                document.getElementById("iconos-rrss").classList.toggle("desaparecer");
+            }
+
+      </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/c485909918.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    
+  
+</body>
+</html>
